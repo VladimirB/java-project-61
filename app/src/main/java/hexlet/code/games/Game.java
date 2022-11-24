@@ -1,10 +1,10 @@
 package hexlet.code.games;
 
+import hexlet.code.question.Question;
+
 public interface Game {
 
     String getCaption();
 
-    String generateQuestion();
-
-    String getCorrectAnswer();
+    Question generateQuestion();
 }

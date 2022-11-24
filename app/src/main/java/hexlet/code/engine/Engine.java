@@ -2,6 +2,7 @@ package hexlet.code.engine;
 
 import hexlet.code.Cli;
 import hexlet.code.games.Game;
+import hexlet.code.question.Question;
 
 import java.util.Scanner;
 
@@ -14,10 +15,11 @@ public class Engine {
         System.out.println(game.getCaption());
 
         for (int i = 0; i < MAX_QUESTIONS; i++) {
-            System.out.println("Question: " + game.generateQuestion());
+            Question question = game.generateQuestion();
+            System.out.println("Question: " + question.getText());
             String answer = readAnswer(scanner);
 
-            String correctAnswer = game.getCorrectAnswer();
+            String correctAnswer = question.getAnswer();
             if (!isAnswerCorrect(answer, correctAnswer)) {
                 System.out.printf("Let's try again, %s!%n", userName);
                 return;

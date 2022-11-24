@@ -1,5 +1,7 @@
 package hexlet.code.games;
 
+import hexlet.code.question.Question;
+
 import java.util.Random;
 
 public class CalcGame implements Game {
@@ -12,15 +14,13 @@ public class CalcGame implements Game {
 
     private static final int MAX_RANDOM_NUM = 15;
 
-    private String lastCorrectAnswer;
-
     @Override
     public String getCaption() {
         return "What is the result of the expression?";
     }
 
     @Override
-    public String generateQuestion() {
+    public Question generateQuestion() {
         Random random = new Random();
 
         int num1 = random.nextInt(MAX_RANDOM_NUM);
@@ -39,13 +39,8 @@ public class CalcGame implements Game {
             case SUBTRACTION -> num1 - num2;
             case MULTIPLICATION -> num1 * num2;
         };
-        lastCorrectAnswer = String.valueOf(answer);
 
-        return String.format("%d %s %d", num1, op, num2);
-    }
-
-    @Override
-    public String getCorrectAnswer() {
-        return lastCorrectAnswer;
+        String text = String.format("%d %s %d", num1, op, num2);
+        return new Question(text, String.valueOf(answer));
     }
 }
