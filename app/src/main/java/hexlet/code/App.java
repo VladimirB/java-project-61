@@ -18,21 +18,28 @@ public class App {
     public static void main(String[] args) {
         printMenu();
 
-        System.out.print("Your choice: ");
-        Scanner scanner = new Scanner(System.in);
-        int command = scanner.nextInt();
-        System.out.println();
+        try (Scanner scanner = new Scanner(System.in)) {
+            System.out.print("Your choice: ");
+            int choice = scanner.nextInt();
+            System.out.println();
 
-        switch (command) {
-            case COMMAND_GREETINGS -> Cli.greetingUser(scanner);
-            case EVEN_GAME -> Engine.play(new EvenGame(), scanner);
-            case CALC_GAME -> Engine.play(new CalcGame(), scanner);
-            case NOD_GAME -> Engine.play(new NodGame(), scanner);
-            case PROGRESSION_GAME -> Engine.play(new ProgressionGame(), scanner);
-            case PRIME_GAME -> Engine.play(new PrimeGame(), scanner);
+            if (choice == COMMAND_GREETINGS) {
+                Cli.greetingUser(scanner);
+                return;
+            }
+
+            Game game = switch (choice) {
+                case EVEN_GAME -> new EvenGame();
+                case CALC_GAME -> new CalcGame();
+                case NOD_GAME -> new NodGame();
+                case PROGRESSION_GAME -> new ProgressionGame();
+                case PRIME_GAME -> new PrimeGame();
+                default -> null;
+            };
+            if (game != null) {
+                Engine.play(game, scanner);
+            }
         }
-
-        scanner.close();
     }
 
     private static void printMenu() {
