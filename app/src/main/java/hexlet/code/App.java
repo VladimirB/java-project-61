@@ -1,7 +1,12 @@
 package hexlet.code;
 
 import hexlet.code.engine.Engine;
-import hexlet.code.games.*;
+import hexlet.code.games.CalcGame;
+import hexlet.code.games.EvenGame;
+import hexlet.code.games.Game;
+import hexlet.code.games.NodGame;
+import hexlet.code.games.PrimeGame;
+import hexlet.code.games.ProgressionGame;
 
 import java.util.Scanner;
 
