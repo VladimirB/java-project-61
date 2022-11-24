@@ -13,3 +13,6 @@ https://asciinema.org/a/Pp48MNJ2i3CNOKonqb8ap80Pm
 
 ### Progression Game
 https://asciinema.org/a/gFXOk0OpHpBExExkj7HGcpLPn
+
+### Prime Game
+https://asciinema.org/a/aPBzeIaVPs6DLE54S9P9sd9dJ
