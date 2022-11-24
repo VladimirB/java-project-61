@@ -23,8 +23,8 @@ public class CalcGame implements Game {
     public Question generateQuestion() {
         Random random = new Random();
 
-        int num1 = random.nextInt(MAX_RANDOM_NUM);
-        int num2 = random.nextInt(MAX_RANDOM_NUM);
+        int num1 = random.nextInt(MAX_RANDOM_NUM + 1);
+        int num2 = random.nextInt(MAX_RANDOM_NUM + 1);
 
         int ordinal = random.nextInt(OperationType.values().length);
         OperationType operationType = OperationType.values()[ordinal];
