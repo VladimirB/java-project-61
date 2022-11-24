@@ -7,3 +7,6 @@ https://asciinema.org/a/h4lhGrtVuMtRQiYRz6EwkhKVF
 
 ### Calc Game
 https://asciinema.org/a/X74a9R97yETppBzZgnqf14Ryq
+
+### NOD Game
+https://asciinema.org/a/Pp48MNJ2i3CNOKonqb8ap80Pm
