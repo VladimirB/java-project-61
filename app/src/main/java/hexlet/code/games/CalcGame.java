@@ -4,7 +4,7 @@ import hexlet.code.question.Question;
 
 import java.util.Random;
 
-public class CalcGame implements Game {
+public final class CalcGame implements Game {
 
     private enum OperationType {
         ADDITION,

@@ -4,7 +4,7 @@ import hexlet.code.question.Question;
 
 import java.util.Random;
 
-public class PrimeGame implements Game {
+public final class PrimeGame implements Game {
 
     private static final int MAX_RANDOM_NUM = 101;
 

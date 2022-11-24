@@ -4,7 +4,7 @@ import hexlet.code.question.Question;
 
 import java.util.Random;
 
-public class ProgressionGame implements Game {
+public final class ProgressionGame implements Game {
 
     private static final int MAX_START_PROGRESSION_NUMBER = 50;
 

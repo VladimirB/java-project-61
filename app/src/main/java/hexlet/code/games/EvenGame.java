@@ -4,7 +4,7 @@ import hexlet.code.question.Question;
 
 import java.util.Random;
 
-public class EvenGame implements Game {
+public final class EvenGame implements Game {
 
     private static final int MAX_RANDOM_NUM = 100;
 
