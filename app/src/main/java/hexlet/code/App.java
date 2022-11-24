@@ -14,7 +14,6 @@ public class App {
     private static final int CALC_GAME = 3;
 
     public static void main(String[] args) {
-        System.out.println("Welcome to the Brain Games!");
         printMenu();
 
         System.out.print("Your choice: ");
