@@ -1,5 +1,6 @@
 package hexlet.code;
 
+import hexlet.code.engine.Engine;
 import hexlet.code.games.CalcGame;
 import hexlet.code.games.EvenGame;
 
@@ -23,14 +24,8 @@ public class App {
 
         switch (command) {
             case COMMAND_GREETINGS -> Cli.greetingUser(scanner);
-            case EVEN_GAME -> {
-                String userName = Cli.greetingUser(scanner);
-                EvenGame.play(userName, scanner);
-            }
-            case CALC_GAME -> {
-                String userName = Cli.greetingUser(scanner);
-                CalcGame.play(userName, scanner);
-            }
+            case EVEN_GAME -> Engine.play(new EvenGame(), scanner);
+            case CALC_GAME -> Engine.play(new CalcGame(), scanner);
         }
 
         scanner.close();
