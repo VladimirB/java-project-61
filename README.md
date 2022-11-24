@@ -4,3 +4,6 @@
 
 ### Even Game
 https://asciinema.org/a/h4lhGrtVuMtRQiYRz6EwkhKVF
+
+### Calc Game
+https://asciinema.org/a/X74a9R97yETppBzZgnqf14Ryq
