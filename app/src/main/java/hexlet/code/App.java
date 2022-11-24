@@ -1,10 +1,7 @@
 package hexlet.code;
 
 import hexlet.code.engine.Engine;
-import hexlet.code.games.CalcGame;
-import hexlet.code.games.EvenGame;
-import hexlet.code.games.NodGame;
-import hexlet.code.games.ProgressionGame;
+import hexlet.code.games.*;
 
 import java.util.Scanner;
 
@@ -16,6 +13,7 @@ public class App {
     private static final int CALC_GAME = 3;
     private static final int NOD_GAME = 4;
     private static final int PROGRESSION_GAME = 5;
+    private static final int PRIME_GAME = 6;
 
     public static void main(String[] args) {
         printMenu();
@@ -31,18 +29,22 @@ public class App {
             case CALC_GAME -> Engine.play(new CalcGame(), scanner);
             case NOD_GAME -> Engine.play(new NodGame(), scanner);
             case PROGRESSION_GAME -> Engine.play(new ProgressionGame(), scanner);
+            case PRIME_GAME -> Engine.play(new PrimeGame(), scanner);
         }
 
         scanner.close();
     }
 
     private static void printMenu() {
-        System.out.println("Please enter the game number and press Enter.");
-        System.out.println("1 - Greet");
-        System.out.println("2 - Even");
-        System.out.println("3 - Calc");
-        System.out.println("4 - NOD");
-        System.out.println("5 - Progression");
-        System.out.println("0 - Exit");
+        String sb = """
+                Please enter the game number and press Enter.
+                1 - Greet
+                2 - Even
+                3 - Calc
+                4 - NOD
+                5 - Progression
+                6 - Prime
+                0 - Exit""";
+        System.out.println(sb);
     }
 }
