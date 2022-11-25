@@ -29,7 +29,7 @@ public final class NodGame implements Game {
 
     private int findNod(int num1, int num2) {
         int div = Math.min(num1, num2);
-        while (div != MIN_DIVIDER) {
+        while (div > MIN_DIVIDER) {
             if (num1 % div == 0 && num2 % div == 0) {
                 break;
             }
