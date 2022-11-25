@@ -16,10 +16,10 @@ public class Engine {
 
         for (int i = 0; i < MAX_QUESTIONS; i++) {
             Question question = game.generateQuestion();
-            System.out.println("Question: " + question.getText());
+            System.out.println("Question: " + question.text());
             String answer = readAnswer(scanner);
 
-            String correctAnswer = question.getAnswer();
+            String correctAnswer = question.answer();
             if (!isAnswerCorrect(answer, correctAnswer)) {
                 System.out.printf("Let's try again, %s!%n", userName);
                 return;
