@@ -6,11 +6,7 @@ import java.util.Random;
 
 public final class CalcGame implements Game {
 
-    private enum OperationType {
-        ADDITION,
-        SUBTRACTION,
-        MULTIPLICATION
-    }
+    private static final String[] OPERATIONS = {"+", "-", "*"};
 
     private static final int MAX_RANDOM_NUM = 15;
 
@@ -26,21 +22,20 @@ public final class CalcGame implements Game {
         int num1 = random.nextInt(MAX_RANDOM_NUM + 1);
         int num2 = random.nextInt(MAX_RANDOM_NUM + 1);
 
-        int ordinal = random.nextInt(OperationType.values().length);
-        OperationType operationType = OperationType.values()[ordinal];
-        String op = switch (operationType) {
-            case ADDITION -> "+";
-            case SUBTRACTION -> "-";
-            case MULTIPLICATION -> "*";
-        };
+        int index = random.nextInt(OPERATIONS.length);
+        String operation = OPERATIONS[index];
 
-        var answer = switch (operationType) {
-            case ADDITION -> num1 + num2;
-            case SUBTRACTION -> num1 - num2;
-            case MULTIPLICATION -> num1 * num2;
-        };
-
-        String text = String.format("%d %s %d", num1, op, num2);
+        var answer = calcExpression(operation, num1, num2);
+        var text = String.format("%d %s %d", num1, operation, num2);
         return new Question(text, String.valueOf(answer));
+    }
+
+    private int calcExpression(String sign, int num1, int num2) {
+        return switch (sign) {
+            case "+" -> num1 + num2;
+            case "-" -> num1 - num2;
+            case "*" -> num1 * num2;
+            default -> throw new UnsupportedOperationException("Operation is not support: " + sign);
+        };
     }
 }
