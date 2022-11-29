@@ -20,7 +20,11 @@ public final class EvenGame implements Game {
     public Question generateQuestion() {
         Random random = new Random();
         int number = random.nextInt(MAX_RANDOM_NUM + 1);
-        String answer = number % 2 == 0 ? YES : NO;
+        String answer = isEven(number) ? YES : NO;
         return new Question(String.valueOf(number), answer);
+    }
+
+    private static boolean isEven(int number) {
+        return number % 2 == 0;
     }
 }
