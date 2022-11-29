@@ -19,7 +19,7 @@ public final class EvenGame implements Game {
     @Override
     public Question generateQuestion() {
         Random random = new Random();
-        int number = random.nextInt(MAX_RANDOM_NUM + 1);
+        int number = random.nextInt(MAX_RANDOM_NUM) + 1;
         String answer = isEven(number) ? YES : NO;
         return new Question(String.valueOf(number), answer);
     }

@@ -20,7 +20,7 @@ public final class PrimeGame implements Game {
     public Question generateQuestion() {
         Random random = new Random();
 
-        int number = random.nextInt(MAX_RANDOM_NUM + 1);
+        int number = random.nextInt(MAX_RANDOM_NUM) + 1;
         String answer = isPrime(number) ? YES : NO;
         return new Question(String.valueOf(number), answer);
     }

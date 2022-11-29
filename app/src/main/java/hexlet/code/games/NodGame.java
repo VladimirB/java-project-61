@@ -19,8 +19,8 @@ public final class NodGame implements Game {
     public Question generateQuestion() {
         Random random = new Random();
 
-        int num1 = random.nextInt(MAX_RANDOM_NUM + 1);
-        int num2 = random.nextInt(MAX_RANDOM_NUM + 1);
+        int num1 = random.nextInt(MAX_RANDOM_NUM) + 1;
+        int num2 = random.nextInt(MAX_RANDOM_NUM) + 1;
 
         String text = String.format("%d %d", num1, num2);
         String answer = String.valueOf(findNod(num1, num2));
