@@ -1,6 +1,6 @@
 package hexlet.code.games;
 
-import hexlet.code.question.Question;
+import hexlet.code.Question;
 
 public interface Game {
 
