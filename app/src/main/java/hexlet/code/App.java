@@ -38,8 +38,11 @@ public class App {
                 case PRIME_GAME -> new PrimeGame();
                 default -> null;
             };
+
             if (game != null) {
                 Engine.play(game, scanner);
+            } else {
+                System.out.println("Invalid number entered. Restart the game.");
             }
         }
     }
