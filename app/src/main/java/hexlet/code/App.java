@@ -24,9 +24,7 @@ public class App {
         printMenu();
 
         try (Scanner scanner = new Scanner(System.in)) {
-            System.out.print("Your choice: ");
-            int choice = scanner.nextInt();
-            System.out.println();
+            int choice = readChoice(scanner);
 
             if (choice == COMMAND_GREETINGS) {
                 Cli.greetingUser(scanner);
@@ -58,5 +56,12 @@ public class App {
                 6 - Prime
                 0 - Exit""";
         System.out.println(sb);
+    }
+
+    private static int readChoice(Scanner scanner) {
+        System.out.print("Your choice: ");
+        int choice = scanner.nextInt();
+        System.out.println();
+        return choice;
     }
 }
