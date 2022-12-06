@@ -40,7 +40,7 @@ public class App {
             };
 
             if (game != null) {
-                Engine.play(game, scanner);
+                game.play(scanner);
             } else {
                 System.out.println("Invalid number entered. Restart the game.");
             }

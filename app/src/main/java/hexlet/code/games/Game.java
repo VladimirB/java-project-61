@@ -1,10 +1,17 @@
 package hexlet.code.games;
 
+import hexlet.code.Engine;
 import hexlet.code.Question;
 
-public interface Game {
+import java.util.Scanner;
 
-    String getCaption();
+public abstract class Game {
 
-    Question generateQuestion();
+    public abstract String getCaption();
+
+    public abstract Question generateQuestion();
+
+    public final void play(Scanner scanner) {
+        Engine.play(this, scanner);
+    }
 }

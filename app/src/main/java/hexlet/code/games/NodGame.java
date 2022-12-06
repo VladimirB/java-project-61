@@ -4,7 +4,7 @@ import hexlet.code.Question;
 
 import java.util.Random;
 
-public final class NodGame implements Game {
+public final class NodGame extends Game {
 
     private static final int MAX_RANDOM_NUM = 100;
 

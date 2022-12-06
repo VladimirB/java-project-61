@@ -4,7 +4,7 @@ import hexlet.code.Question;
 
 import java.util.Random;
 
-public final class CalcGame implements Game {
+public final class CalcGame extends Game {
 
     private static final String[] OPERATIONS = {"+", "-", "*"};
 
